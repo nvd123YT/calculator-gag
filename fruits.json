@@ -2,15 +2,15 @@
   "fruits": [
     {
       "id": 1,
-      "name": "Sunberry",
-      "image": "images/sunberry.png",
-      "basePricePerKg": 15
+      "name": "Carrot",
+      "image": "images/carrot.webp",
+      "basePricePerKg": 20
     },
     {
       "id": 2,
-      "name": "Moonmelon",
-      "image": "images/moonmelon.png",
-      "basePricePerKg": 40
+      "name": "Strawberry",
+      "image": "images/strawberry.webp",
+      "basePricePerKg": 15
     }
   ],
   "mutations": [
