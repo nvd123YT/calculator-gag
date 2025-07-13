@@ -1,21 +1,972 @@
 {
   "fruits": [
     {
-      "id": 1,
       "name": "Carrot",
       "image": "images/carrot.webp",
-      "basePricePerKg": 20
+      "rarity": "common",
+      "baseValue": 20,
+      "baseWeightKg": 0.28
     },
     {
-      "id": 2,
       "name": "Strawberry",
       "image": "images/strawberry.webp",
-      "basePricePerKg": 15
+      "rarity": "common",
+      "baseValue": 15,
+      "baseWeightKg": 0.30
+    },
+    {
+      "name": "Pink Tulip",
+      "image": "images/pinktulip.webp",
+      "rarity": "common",
+      "baseValue": 850,
+      "baseWeightKg": 0.05,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Chocolate Carrot",
+      "image": "images/chocolatecarrot.webp",
+      "rarity": "common",
+      "baseValue": 11000,
+      "baseWeightKg": 0.28,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Blueberry",
+      "image": "images/blueberry.webp",
+      "rarity": "uncommon",
+      "baseValue": 20,
+      "baseWeightKg": 0.20
+    },
+    {
+      "name": "Rose",
+      "image": "images/rose.webp",
+      "rarity": "uncommon",
+      "baseValue": 5000,
+      "baseWeightKg": 1.00
+    },
+    {
+      "name": "Orange Tulip",
+      "image": "images/orangetulip.webp",
+      "rarity": "uncommon",
+      "baseValue": 850,
+      "baseWeightKg": 0.05
+    },
+    {
+      "name": "Stonebite",
+      "image": "images/stonebite.webp",
+      "rarity": "uncommon",
+      "baseValue": 35000,
+      "baseWeightKg": 1.00
+    },
+    {
+      "name": "Red Lollipop",
+      "image": "images/redlollipop.webp",
+      "rarity": "uncommon",
+      "baseValue": 50000,
+      "baseWeightKg": 4.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Nightshade",
+      "image": "images/nightshade.webp",
+      "rarity": "uncommon",
+      "baseValue": 3500,
+      "baseWeightKg": 0.50,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Crocus",
+      "image": "images/crocus.webp",
+      "rarity": "uncommon",
+      "baseValue": 30000,
+      "baseWeightKg": 0.28,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Lavender",
+      "image": "images/lavender.webp",
+      "rarity": "uncommon",
+      "baseValue": 25000,
+      "baseWeightKg": 0.28,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Manuka Flower",
+      "image": "images/manukaflower.webp",
+      "rarity": "uncommon",
+      "baseValue": 25000,
+      "baseWeightKg": 0.30,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Wild Carrot",
+      "image": "images/wildcarrot.webp",
+      "rarity": "uncommon",
+      "baseValue": 15,
+      "baseWeightKg": 0.30,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Blue Lollipop",
+      "image": "images/bluelollipop.webp",
+      "rarity": "uncommon",
+      "baseValue": 50000,
+      "baseWeightKg": 1.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Tomato",
+      "image": "images/tomato.webp",
+      "rarity": "rare",
+      "baseValue": 30,
+      "baseWeightKg": 0.50
+    },
+    {
+      "name": "Daffodil",
+      "image": "images/daffodil.webp",
+      "rarity": "rare",
+      "baseValue": 1000,
+      "baseWeightKg": 0.20
+    },
+    {
+      "name": "Cauliflower",
+      "image": "images/cauliflower.webp",
+      "rarity": "rare",
+      "baseValue": 40,
+      "baseWeightKg": 5.00
+    },
+    {
+      "name": "Raspberry",
+      "image": "images/raspberry.webp",
+      "rarity": "rare",
+      "baseValue": 100,
+      "baseWeightKg": 0.75
+    },
+    {
+      "name": "Foxglove",
+      "image": "images/foxglove.webp",
+      "rarity": "rare",
+      "baseValue": 20000,
+      "baseWeightKg": 2.00
+    },
+    {
+      "name": "Peace Lily",
+      "image": "images/peacelily.webp",
+      "rarity": "rare",
+      "baseValue": 24000,
+      "baseWeightKg": 0.60
+    },
+    {
+      "name": "Corn",
+      "image": "images/corn.webp",
+      "rarity": "rare",
+      "baseValue": 40,
+      "baseWeightKg": 2.00
+    },
+    {
+      "name": "Paradise Petal",
+      "image": "images/paradisepetal.webp",
+      "rarity": "rare",
+      "baseValue": 25000,
+      "baseWeightKg": 2.75
+    },
+    {
+      "name": "Horsetail",
+      "image": "images/horsetail.webp",
+      "rarity": "rare",
+      "baseValue": 30000,
+      "baseWeightKg": 3.00
+    },
+    {
+      "name": "Candy Sunflower",
+      "image": "images/candysunflower.webp",
+      "rarity": "rare",
+      "baseValue": 80000,
+      "baseWeightKg": 1.50,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Mint",
+      "image": "images/mint.webp",
+      "rarity": "rare",
+      "baseValue": 5250,
+      "baseWeightKg": 1.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Glowshroom",
+      "image": "images/glowshroom.webp",
+      "rarity": "rare",
+      "baseValue": 300,
+      "baseWeightKg": 0.75,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Dandelion",
+      "image": "images/dandelion.webp",
+      "rarity": "rare",
+      "baseValue": 50000,
+      "baseWeightKg": 4.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Nectarshade",
+      "image": "images/nectarshade.webp",
+      "rarity": "rare",
+      "baseValue": 50000,
+      "baseWeightKg": 0.80,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Succulent",
+      "image": "images/succulent.webp",
+      "rarity": "rare",
+      "baseValue": 25000,
+      "baseWeightKg": 5.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Bee Balm",
+      "image": "images/beebalm.webp",
+      "rarity": "rare",
+      "baseValue": 18000,
+      "baseWeightKg": 1.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Pear",
+      "image": "images/pear.webp",
+      "rarity": "rare",
+      "baseValue": 20000,
+      "baseWeightKg": 3.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Delphinium",
+      "image": "images/delphinium.webp",
+      "rarity": "rare",
+      "baseValue": 24000,
+      "baseWeightKg": 0.36,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Liberty Lily",
+      "image": "images/libertylily.webp",
+      "rarity": "rare",
+      "baseValue": 30000,
+      "baseWeightKg": 6.50,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Noble Flower",
+      "image": "images/nobelflower.webp",
+      "rarity": "rare",
+      "baseValue": 20000,
+      "baseWeightKg": 5.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Watermelon",
+      "image": "images/watermelon.webp",
+      "rarity": "legendary",
+      "baseValue": 3000,
+      "baseWeightKg": 7.00
+    },
+    {
+      "name": "Pumpkin",
+      "image": "images/pumpkin.webp",
+      "rarity": "legendary",
+      "baseValue": 3400,
+      "baseWeightKg": 8.00
+    },
+    {
+      "name": "Avocado",
+      "image": "images/avocado.webp",
+      "rarity": "legendary",
+      "baseValue": 15,
+      "baseWeightKg": 0.30
+    },
+    {
+      "name": "Green Apple",
+      "image": "images/greenapple.webp",
+      "rarity": "legendary",
+      "baseValue": 300,
+      "baseWeightKg": 3.00
+    },
+    {
+      "name": "Banana",
+      "image": "images/banana.webp",
+      "rarity": "legendary",
+      "baseValue": 15,
+      "baseWeightKg": 0.30
+    },
+    {
+      "name": "Lilac",
+      "image": "images/lilac.webp",
+      "rarity": "legendary",
+      "baseValue": 35000,
+      "baseWeightKg": 3.00
+    },
+    {
+      "name": "Aloe Vera",
+      "image": "images/aloevera.webp",
+      "rarity": "legendary",
+      "baseValue": 69000,
+      "baseWeightKg": 5.50
+    },
+    {
+      "name": "Bamboo",
+      "image": "images/bamboo.webp",
+      "rarity": "legendary",
+      "baseValue": 4000,
+      "baseWeightKg": 4.00
+    },
+    {
+      "name": "Rafflesia",
+      "image": "images/rafflesia.webp",
+      "rarity": "legendary",
+      "baseValue": 3500,
+      "baseWeightKg": 8.00
+    },
+    {
+      "name": "Lingonberry",
+      "image": "images/lingonberry.webp",
+      "rarity": "legendary",
+      "baseValue": 35000,
+      "baseWeightKg": 0.50
+    },
+    {
+      "name": "Horned Dinoshroom",
+      "image": "images/horneddinoshroom.webp",
+      "rarity": "legendary",
+      "baseValue": 69000,
+      "baseWeightKg": 5.00
+    },
+    {
+      "name": "Boneboo",
+      "image": "images/boneboo.webp",
+      "rarity": "legendary",
+      "baseValue": 141141,
+      "baseWeightKg": 15.00
+    },
+    {
+      "name": "Cranberry",
+      "image": "images/cranberry.webp",
+      "rarity": "legendary",
+      "baseValue": 3500,
+      "baseWeightKg": 1.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Durian",
+      "image": "images/durian.webp",
+      "rarity": "legendary",
+      "baseValue": 7500,
+      "baseWeightKg": 8.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Papaya",
+      "image": "images/papaya.webp",
+      "rarity": "legendary",
+      "baseValue": 1000,
+      "baseWeightKg": 3.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Moonflower",
+      "image": "images/moonflower.webp",
+      "rarity": "legendary",
+      "baseValue": 15,
+      "baseWeightKg": 0.30,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Starfruit",
+      "image": "images/starfruit.webp",
+      "rarity": "legendary",
+      "baseValue": 15,
+      "baseWeightKg": 0.30,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Lumira",
+      "image": "images/lumira.webp",
+      "rarity": "legendary",
+      "baseValue": 85000,
+      "baseWeightKg": 6.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Violet Corn",
+      "image": "images/violetcorn.webp",
+      "rarity": "legendary",
+      "baseValue": 50000,
+      "baseWeightKg": 3.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Nectar Thorn",
+      "image": "images/nectarthorn.webp",
+      "rarity": "legendary",
+      "baseValue": 40000,
+      "baseWeightKg": 7.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Cantaloupe",
+      "image": "images/cantaloupe.webp",
+      "rarity": "legendary",
+      "baseValue": 15,
+      "baseWeightKg": 0.30,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Firework Flower",
+      "image": "images/fireworkflower.webp",
+      "rarity": "legendary",
+      "baseValue": 151000,
+      "baseWeightKg": 20.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Peach",
+      "image": "images/peach.webp",
+      "rarity": "mythical",
+      "baseValue": 300,
+      "baseWeightKg": 2.00
+    },
+    {
+      "name": "Pineapple",
+      "image": "images/pineapple.webp",
+      "rarity": "mythical",
+      "baseValue": 2000,
+      "baseWeightKg": 3.00
+    },
+    {
+      "name": "Guanabana",
+      "image": "images/guanabana.webp",
+      "rarity": "mythical",
+      "baseValue": 70500,
+      "baseWeightKg": 4.00
+    },
+    {
+      "name": "Amber Spine",
+      "image": "images/amberspine.webp",
+      "rarity": "mythical",
+      "baseValue": 55000,
+      "baseWeightKg": 6.00
+    },
+    {
+      "name": "Coconut",
+      "image": "images/coconut.webp",
+      "rarity": "mythical",
+      "baseValue": 400,
+      "baseWeightKg": 14.00
+    },
+    {
+      "name": "Cactus",
+      "image": "images/cactus.webp",
+      "rarity": "mythical",
+      "baseValue": 3400,
+      "baseWeightKg": 7.00
+    },
+    {
+      "name": "Dragon Fruit",
+      "image": "images/dragonfruit.webp",
+      "rarity": "mythical",
+      "baseValue": 4750,
+      "baseWeightKg": 12.00
+    },
+    {
+      "name": "Mango",
+      "image": "images/mango.webp",
+      "rarity": "mythical",
+      "baseValue": 6500,
+      "baseWeightKg": 15.00
+    },
+    {
+      "name": "Kiwi",
+      "image": "images/kiwi.webp",
+      "rarity": "mythical",
+      "baseValue": 2750,
+      "baseWeightKg": 5.00
+    },
+    {
+      "name": "Bell Pepper",
+      "image": "images/bellpepper.webp",
+      "rarity": "mythical",
+      "baseValue": 5500,
+      "baseWeightKg": 8.00
+    },
+    {
+      "name": "Prickly Pear",
+      "image": "images/pricklypear.webp",
+      "rarity": "mythical",
+      "baseValue": 7000,
+      "baseWeightKg": 7.00
+    },
+    {
+      "name": "Pink Lily",
+      "image": "images/pinklily.webp",
+      "rarity": "mythical",
+      "baseValue": 65000,
+      "baseWeightKg": 6.00
+    },
+    {
+      "name": "Purple Dahlia",
+      "image": "images/purpledahlia.webp",
+      "rarity": "mythical",
+      "baseValue": 75000,
+      "baseWeightKg": 12.00
+    },
+    {
+      "name": "Firefly Fern",
+      "image": "images/fireflyfern.webp",
+      "rarity": "mythical",
+      "baseValue": 60000,
+      "baseWeightKg": 4.00
+    },
+    {
+      "name": "Easter Egg",
+      "image": "images/easteregg.webp",
+      "rarity": "mythical",
+      "baseValue": 2500,
+      "baseWeightKg": 3.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Eggplant",
+      "image": "images/eggplant.webp",
+      "rarity": "mythical",
+      "baseValue": 12000,
+      "baseWeightKg": 5.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Passionfruit",
+      "image": "images/passionfruit.webp",
+      "rarity": "mythical",
+      "baseValue": 3550,
+      "baseWeightKg": 3.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Lemon",
+      "image": "images/lemon.webp",
+      "rarity": "mythical",
+      "baseValue": 350,
+      "baseWeightKg": 1.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Moon Melon",
+      "image": "images/moonmelon.webp",
+      "rarity": "mythical",
+      "baseValue": 18000,
+      "baseWeightKg": 8.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Blood Banana",
+      "image": "images/bloodbanana.webp",
+      "rarity": "mythical",
+      "baseValue": 6000,
+      "baseWeightKg": 1.50,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Celestiberry",
+      "image": "images/celestiberry.webp",
+      "rarity": "mythical",
+      "baseValue": 10000,
+      "baseWeightKg": 2.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Nectarine",
+      "image": "images/nectarine.webp",
+      "rarity": "mythical",
+      "baseValue": 48000,
+      "baseWeightKg": 3.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Honeysuckle",
+      "image": "images/honeysuckle.webp",
+      "rarity": "mythical",
+      "baseValue": 100000,
+      "baseWeightKg": 12.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Suncoil",
+      "image": "images/suncoil.webp",
+      "rarity": "mythical",
+      "baseValue": 80000,
+      "baseWeightKg": 10.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Bendboo",
+      "image": "images/bendboo.webp",
+      "rarity": "mythical",
+      "baseValue": 155000,
+      "baseWeightKg": 18.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Cocovine",
+      "image": "images/cocovine.webp",
+      "rarity": "mythical",
+      "baseValue": 66666,
+      "baseWeightKg": 14.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Parasol Flower",
+      "image": "images/parasolflower.webp",
+      "rarity": "mythical",
+      "baseValue": 200000,
+      "baseWeightKg": 6.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Lily Of The Valley",
+      "image": "images/lilyofthevalley.webp",
+      "rarity": "mythical",
+      "baseValue": 49120,
+      "baseWeightKg": 6.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Grape",
+      "image": "images/grape.webp",
+      "rarity": "divine",
+      "baseValue": 7850,
+      "baseWeightKg": 3.00
+    },
+    {
+      "name": "Loquat",
+      "image": "images/loquat.webp",
+      "rarity": "divine",
+      "baseValue": 8000,
+      "baseWeightKg": 6.50
+    },
+    {
+      "name": "Mushroom",
+      "image": "images/mushroom.webp",
+      "rarity": "divine",
+      "baseValue": 151000,
+      "baseWeightKg": 25.00
+    },
+    {
+      "name": "Pepper",
+      "image": "images/pepper.webp",
+      "rarity": "divine",
+      "baseValue": 8000,
+      "baseWeightKg": 5.00
+    },
+    {
+      "name": "Cacao",
+      "image": "images/cacao.webp",
+      "rarity": "divine",
+      "baseValue": 12000,
+      "baseWeightKg": 8.00
+    },
+    {
+      "name": "Feijoa",
+      "image": "images/feijoa.webp",
+      "rarity": "divine",
+      "baseValue": 13000,
+      "baseWeightKg": 10.00
+    },
+    {
+      "name": "Pitcher Plant",
+      "image": "images/pitcherplant.webp",
+      "rarity": "divine",
+      "baseValue": 32000,
+      "baseWeightKg": 12.00
+    },
+    {
+      "name": "Grand Volcania",
+      "image": "images/grandvolcania.webp",
+      "rarity": "divine",
+      "baseValue": 68555,
+      "baseWeightKg": 7.00
+    },
+    {
+      "name": "Sunflower",
+      "image": "images/sunflower.webp",
+      "rarity": "divine",
+      "baseValue": 160000,
+      "baseWeightKg": 16.50
+    },
+    {
+      "name": "Fossilight",
+      "image": "images/fossilight.webp",
+      "rarity": "divine",
+      "baseValue": 80000,
+      "baseWeightKg": 4.00
+    },
+    {
+      "name": "Cherry Blossom",
+      "image": "images/cherryblossom.webp",
+      "rarity": "divine",
+      "baseValue": 500,
+      "baseWeightKg": 3.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Crimson Vine",
+      "image": "images/crimsonvine.webp",
+      "rarity": "divine",
+      "baseValue": 1250,
+      "baseWeightKg": 1.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Candy Blossom",
+      "image": "images/candyblossom.webp",
+      "rarity": "divine",
+      "baseValue": 89000,
+      "baseWeightKg": 3.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Lotus",
+      "image": "images/lotus.webp",
+      "rarity": "divine",
+      "baseValue": 35000,
+      "baseWeightKg": 20.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Venus Fly Trap",
+      "image": "images/venusflytrap.webp",
+      "rarity": "divine",
+      "baseValue": 85000,
+      "baseWeightKg": 10.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Cursed Fruit",
+      "image": "images/cursedfruit.webp",
+      "rarity": "divine",
+      "baseValue": 25570,
+      "baseWeightKg": 30.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Soul Fruit",
+      "image": "images/soulfruit.webp",
+      "rarity": "divine",
+      "baseValue": 7750,
+      "baseWeightKg": 25.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Mega Mushroom",
+      "image": "images/megamushroom.webp",
+      "rarity": "divine",
+      "baseValue": 500,
+      "baseWeightKg": 70,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Moon Blossom",
+      "image": "images/moonblossom.webp",
+      "rarity": "divine",
+      "baseValue": 66666,
+      "baseWeightKg": 3.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Moon Mango",
+      "image": "images/moonmango.webp",
+      "rarity": "divine",
+      "baseValue": 84000,
+      "baseWeightKg": 18.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Hive Fruit",
+      "image": "images/hivefruit.webp",
+      "rarity": "divine",
+      "baseValue": 62000,
+      "baseWeightKg": 8.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Dragon Pepper",
+      "image": "images/dragonpepper.webp",
+      "rarity": "divine",
+      "baseValue": 81000,
+      "baseWeightKg": 6.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Rosy Delight",
+      "image": "images/rosydelight.webp",
+      "rarity": "divine",
+      "baseValue": 69000,
+      "baseWeightKg": 10.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Traveler's Fruit",
+      "image": "images/travelersfruit.webp",
+      "rarity": "divine",
+      "baseValue": 70000,
+      "baseWeightKg": 15.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Beanstalk",
+      "image": "images/beanstalk.webp",
+      "rarity": "prismatic",
+      "baseValue": 28000,
+      "baseWeightKg": 10.00
+    },
+    {
+      "name": "Ember Lily",
+      "image": "images/emberlily.webp",
+      "rarity": "prismatic",
+      "baseValue": 66666,
+      "baseWeightKg": 12.00
+    },
+    {
+      "name": "Sugar Apple",
+      "image": "images/sugarapple.webp",
+      "rarity": "prismatic",
+      "baseValue": 50000,
+      "baseWeightKg": 9.00
+    },
+    {
+      "name": "Burning Bud",
+      "image": "images/burningbud.webp",
+      "rarity": "prismatic",
+      "baseValue": 70000,
+      "baseWeightKg": 12.00
+    },
+    {
+      "name": "Giant Pinecone",
+      "image": "images/giantpinecone.webp",
+      "rarity": "prismatic",
+      "baseValue": 65000,
+      "baseWeightKg": 5.00
+    },
+    {
+      "name": "Elephant Ears",
+      "image": "images/elephantears.webp",
+      "rarity": "prismatic",
+      "baseValue": 77000,
+      "baseWeightKg": 18.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Bone Blossom",
+      "image": "images/boneblossom.webp",
+      "rarity": "transcendent",
+      "baseValue": 200000,
+      "baseWeightKg": 3.00
     }
   ],
   "mutations": [
-    { "id": "giant", "name": "Giant", "multiplier": 1.5 },
-    { "id": "golden", "name": "Golden", "multiplier": 1.8 },
-    { "id": "radiant", "name": "Radiant", "multiplier": 2.0 }
+    {
+      "id": "gold",
+      "name": "🟡Gold",
+      "multiplier": 20.0
+    },
+    {
+      "id": "rainbow",
+      "name": "🌈Rainbow",
+      "multiplier": 50.0
+    },
+    {
+      "id": "wet",
+      "name": "💧Wet",
+      "multiplier": 2.0
+    },
+    {
+      "id": "windstruck",
+      "name": "🍃Windstruck",
+      "multiplier": 2.0
+    },
+    {
+      "id": "moonlit",
+      "name": "🌙Moonlit",
+      "multiplier": 2.0
+    },
+    {
+      "id": "clay",
+      "name": "🟤Clay",
+      "multiplier": 3.0
+    },
+    {
+      "id": "chilled",
+      "name": "❄️Chilled",
+      "multiplier": 2.0
+    },
+    {
+      "id": "choc",
+      "name": "🍫Choc",
+      "multiplier": 2.0
+    },
+    {
+      "id": "pollinated",
+      "name": "🐝Pollinated",
+      "multiplier": 3.0
+    },
+    {
+      "id": "sandy",
+      "name": "🩴Sandy",
+      "multiplier": 3.0
+    },
+    {
+      "id": "bloodlit",
+      "name": "🩸Bloodlit",
+      "multiplier": 4.0
+    },
+    {
+      "id": "twisted",
+      "name": "🌪️Twisted",
+      "multiplier": 5.0
+    },
+    {
+      "id": "drenched",
+      "name": "⛈️Drenched",
+      "multiplier": 5.0
+    },
+    {
+      "id": "cloudtouched",
+      "name": "☁️Cloudtouched",
+      "multiplier": 5.0
+    },
+    {
+      "id": "frozen",
+      "name": "🧊Frozen",
+      "multiplier": 10.0
+    },
+    {
+      "id": "tempestuous",
+      "name": "💨Tempestuous",
+      "multiplier": 19.0
+    },
+    {
+      "id": "aurora",
+      "name": "🌌Aurora",
+      "multiplier": 90.0
+    },
+    {
+      "id": "shocked",
+      "name": "⚡Shocked",
+      "multiplier": 100.0
+    },
+    {
+      "id": "celestial",
+      "name": "☄️Celestial",
+      "multiplier": 120.0
+    }
   ]
 }

@@ -1,95 +1,231 @@
-/* Reset some default styles */
-body, h1, h2, p, input, button {
+/* Reset */
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   box-sizing: border-box;
 }
 
-/* Body styling */
 body {
-  background: #fafafa;
-  color: #333;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.6;
   padding: 20px;
   max-width: 800px;
   margin: auto;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
 }
 
-/* Heading */
 h1 {
   text-align: center;
   font-size: 2em;
   margin-bottom: 20px;
 }
 
-/* Grid of fruits */
+#themeToggle {
+  display: block;
+  color: var(--text);
+  margin: 15px auto 20px auto;
+  background: none;
+  border: 2px solid var(--button-border);
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background 0.3s, color 0.3s, border 0.3s;
+}
+
+#themeToggle:hover {
+  background: var(--button-bg-hover);
+  color: var(--button-text-hover);
+}
+
+#searchInput {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+#filters {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#filters label {
+  background: #f0f0f0;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+#filters input[type="checkbox"] {
+  margin-right: 4px;
+}
+
 #fruitGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   gap: 15px;
   margin-bottom: 30px;
+
+  /* New: limit height and enable scrolling */
+  max-height: 400px;
+  /* adjust for ~4 rows */
+  overflow-y: auto;
+  padding-right: 10px;
+  /* for scrollbar space if needed */
+  scroll-behavior: smooth;
 }
 
-/* Individual fruit */
 .fruit {
-  background: white;
+  display: flex;
+  flex-direction: column;
+  background: var(--card-bg);
   border-radius: 12px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
   cursor: pointer;
-  padding: 10px;
-  transition: transform 0.2s, box-shadow 0.2s;
+  padding: 8px;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+  position: relative;
+  /* NEW: make it a positioned parent */
+  height: 200px;
+  /* NEW: force all cards same height */
+  padding-bottom: 40px;
+  /* NEW: make room for rarity at bottom */
 }
+
 .fruit:hover {
   transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
+
 .fruit img {
   max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+  object-fit: contain;
   margin-bottom: 8px;
-}
-.fruit p {
-  font-size: 0.9em;
-  font-weight: 500;
+  height: 82px;
 }
 
-/* Calculator section */
+.fruit p {
+  line-height: 20px;
+  margin: auto;
+  font-family: monospace;
+  font-size: 1.3em;
+}
+
+.fruit.selected {
+  border: 2px solid #4CAF50;
+  /* Green outline */
+  background: rgba(76, 175, 80, 0.1);
+  /* Light green tint */
+}
+
+.rarity {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 12px;
+  font-size: 0.75em;
+  font-weight: bold;
+  text-transform: capitalize;
+
+  position: absolute;
+  /* NEW: stick it to the bottom */
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.rarity.common {
+  background: #ccc;
+  color: #333;
+}
+
+.rarity.uncommon {
+  background: #4CAF50;
+  color: white;
+}
+
+.rarity.rare {
+  background: #2196F3;
+  color: white;
+}
+
+.rarity.legendary {
+  background: #FF9800;
+  color: white;
+}
+
+.rarity.mythical {
+  background: #9C27B0;
+  color: white;
+}
+
+.rarity.divine {
+  background: #E91E63;
+  color: white;
+}
+
+.rarity.prismatic {
+  background: linear-gradient(45deg, #00BCD4, #E91E63, #FFC107, #8BC34A);
+  color: white;
+}
+
+.rarity.transcendent {
+  background: linear-gradient(90deg, #8e2de2, #4a00e0);
+  color: #fff;
+}
+
+.badge-unobtainable {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #f44336;
+  color: #fff;
+  font-size: 0.7em;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 #calculator {
-  background: white;
+  background: var(--card-bg);
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Selected fruit name */
-#selectedFruitName {
-  font-size: 1.2em;
-  margin-bottom: 10px;
-  display: block;
-  text-align: center;
-}
-
-/* Input field */
-input[type="number"] {
+input[type=\"number\"] {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--input-border);
   border-radius: 8px;
   margin-bottom: 15px;
   font-size: 1em;
+  background: var(--input-bg);
+  color: var(--text);
 }
 
-/* Mutations checkboxes */
-#mutations label {
-  display: block;
-  margin-bottom: 8px;
+#mutationsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
+  gap: 3px;
+}
+
+#mutationsGrid label {
+  /* display: block;
+  margin-bottom: 8px; */
+  cursor: pointer;
   font-size: 0.95em;
 }
 
-/* Calculate button */
 button {
   display: block;
   width: 100%;
@@ -102,11 +238,11 @@ button {
   cursor: pointer;
   transition: background 0.2s;
 }
+
 button:hover {
   background: #45a049;
 }
 
-/* Result text */
 #result {
   margin-top: 15px;
   font-size: 1.1em;
@@ -114,14 +250,39 @@ button:hover {
   font-weight: 600;
 }
 
-/* Mobile adjustments */
+/* Color Variables */
+:root {
+  --bg: #fafafa;
+  --text: #222;
+  --card-bg: #ffffff;
+  --input-bg: #ffffff;
+  --input-border: #ccc;
+  --button-border: #333;
+  --button-bg-hover: #333;
+  --button-text-hover: #fff;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #eee;
+  --card-bg: #1e1e1e;
+  --input-bg: #1e1e1e;
+  --input-border: #444;
+  --button-border: #eee;
+  --button-bg-hover: #eee;
+  --button-text-hover: #121212;
+}
+
+/* Mobile tweaks */
 @media (max-width: 500px) {
   h1 {
     font-size: 1.5em;
   }
+
   #fruitGrid {
     gap: 10px;
   }
+
   .fruit {
     padding: 8px;
   }
