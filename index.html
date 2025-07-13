@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Grow a Garden Value Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .fruit-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .fruit {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            width: 120px;
+        }
+
+        .fruit img {
+            max-width: 100px;
+        }
+
+        #calculator {
+            margin-top: 30px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Grow a Garden Value Calculator</h1>
+    <div id="fruitGrid" class="fruit-grid"></div>
+
+    <div id="calculator">
+        <h2>Selected Fruit: <span id="selectedFruitName"></span></h2>
+        <label>Weight (grams): <input type="number" id="weightInput"></label><br><br>
+        <div id="mutations"></div>
+        <button onclick="calculate()">Calculate Value</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        let fruits = [];
+        let mutations = [];
+        let selectedFruit = null;
+
+        fetch('fruits.json')
+            .then(res => res.json())
+            .then(data => {
+                fruits = data.fruits;
+                mutations = data.mutations;
+                renderFruits();
+            });
+
+        function renderFruits() {
+            const fruitGrid = document.getElementById('fruitGrid');
+            fruits.forEach(fruit => {
+                const div = document.createElement('div');
+                div.className = 'fruit';
+                div.innerHTML = `
+          <img src="${fruit.image}" alt="${fruit.name}">
+          <p>${fruit.name}</p>
+        `;
+                div.onclick = () => {
+                    selectedFruit = fruit;
+                    document.getElementById('selectedFruitName').textContent = fruit.name;
+                    document.getElementById('calculator').style.display = 'block';
+                    renderMutations(fruit);
+                };
+                fruitGrid.appendChild(div);
+            });
+        }
+
+        function renderMutations(fruit) {
+            const mutationsDiv = document.getElementById('mutations');
+            mutationsDiv.innerHTML = '<p>Mutations:</p>';
+
+            if (mutations.length > 0) {
+                mutations.forEach(mutation => {
+                    const label = document.createElement('label');
+                    label.innerHTML = `
+            <input type="checkbox" value="${mutation.multiplier}"> ${mutation.name} (x${mutation.multiplier})
+          `;
+                    mutationsDiv.appendChild(label);
+                    mutationsDiv.appendChild(document.createElement('br'));
+                });
+            }
+        }
+
+        function calculate() {
+            const weightGrams = parseFloat(document.getElementById('weightInput').value);
+            if (isNaN(weightGrams) || weightGrams <= 0) {
+                alert('Please enter a valid weight.');
+                return;
+            }
+
+            const weightKg = weightGrams / 1000;
+            let totalMultiplier = 1;
+            document.querySelectorAll('#mutations input:checked').forEach(cb => {
+                totalMultiplier *= parseFloat(cb.value);
+            });
+
+            const value = selectedFruit.basePricePerKg * weightKg * totalMultiplier;
+            document.getElementById('result').textContent = `Estimated Value: $${value.toFixed(2)}`;
+        }
+    </script>
+</body>
+
+</html>

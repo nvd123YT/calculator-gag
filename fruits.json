@@ -1,0 +1,21 @@
+{
+  "fruits": [
+    {
+      "id": 1,
+      "name": "Sunberry",
+      "image": "images/sunberry.png",
+      "basePricePerKg": 15
+    },
+    {
+      "id": 2,
+      "name": "Moonmelon",
+      "image": "images/moonmelon.png",
+      "basePricePerKg": 40
+    }
+  ],
+  "mutations": [
+    { "id": "giant", "name": "Giant", "multiplier": 1.5 },
+    { "id": "golden", "name": "Golden", "multiplier": 1.8 },
+    { "id": "radiant", "name": "Radiant", "multiplier": 2.0 }
+  ]
+}
