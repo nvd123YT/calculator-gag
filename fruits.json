@@ -929,6 +929,16 @@
       "multiplier": 4.0
     },
     {
+      "id": "burnt",
+      "name": "🔥Burnt",
+      "multiplier": 4.0
+    },
+    {
+      "id": "verdant",
+      "name": "🟢Verdant",
+      "multiplier": 4.0
+    },
+    {
       "id": "twisted",
       "name": "🌪️Twisted",
       "multiplier": 5.0
@@ -944,14 +954,85 @@
       "multiplier": 5.0
     },
     {
+      "id": "plasma",
+      "name": "🔴Plasma",
+      "multiplier": 5.0
+    },
+    {
+      "id": "honeyglazed",
+      "name": "🍯Honey Glazed",
+      "multiplier": 5.0
+    },
+    {
+      "id": "heavenly",
+      "name": "🪽Heavenly",
+      "multiplier": 5.0,
+      "admin": true
+    },
+    {
+      "id": "fried",
+      "name": "🫕Fried",
+      "multiplier": 8.0
+    },
+    {
       "id": "frozen",
       "name": "🧊Frozen",
+      "multiplier": 10.0
+    },
+    {
+      "id": "cooked",
+      "name": "🍳Cooked",
+      "multiplier": 10.0
+    },
+    {
+      "id": "amber",
+      "name": "🟠Amber",
       "multiplier": 10.0
     },
     {
       "id": "tempestuous",
       "name": "💨Tempestuous",
       "multiplier": 14.0
+    },
+    {
+      "id": "oldamber",
+      "name": "🟠Old Amber",
+      "multiplier": 20.0
+    },
+    {
+      "id": "zombified",
+      "name": "🧟Zombified",
+      "multiplier": 25.0
+    },
+    {
+      "id": "molten",
+      "name": "🌋Molten",
+      "multiplier": 25.0
+    },
+    {
+      "id": "ceramic",
+      "name": "⬜Ceramic",
+      "multiplier": 30.0
+    },
+    {
+      "id": "ancientamber",
+      "name": "🟠Ancient Amber",
+      "multiplier": 50.0
+    },
+    {
+      "id": "friendbound",
+      "name": "🧑‍🤝‍🧑Friendbound",
+      "multiplier": 70.0
+    },
+    {
+      "id": "infected",
+      "name": "🟢Infected",
+      "multiplier": 75.0
+    },
+    {
+      "id": "sundried",
+      "name": "☀️Sundried",
+      "multiplier": 85.0
     },
     {
       "id": "aurora",
@@ -964,9 +1045,43 @@
       "multiplier": 100.0
     },
     {
+      "id": "paradisal",
+      "name": "🏝️Paradisal",
+      "multiplier": 100.0
+    },
+    {
+      "id": "alienlike",
+      "name": "👾Alienlike",
+      "multiplier": 100.0
+    },
+    {
       "id": "celestial",
-      "name": "☄️Celestial",
+      "name": "🌠Celestial",
       "multiplier": 120.0
+    },
+    {
+      "id": "galactic",
+      "name": "🌌Galactic",
+      "multiplier": 120.0,
+      "admin": true
+    },
+    {
+      "id": "disco",
+      "name": "🪩Disco",
+      "multiplier": 125.0,
+      "admin": true
+    },
+    {
+      "id": "meteoric",
+      "name": "☄️Meteoric",
+      "multiplier": 125.0,
+      "admin": true
+    },
+    {
+      "id": "voidtouched",
+      "name": "🟣Voidtouched",
+      "multiplier": 135.0,
+      "admin": true
     }
   ]
 }

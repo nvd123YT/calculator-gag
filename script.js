@@ -47,16 +47,24 @@ function renderFruits() {
         .forEach(fruit => {
             const div = document.createElement('div');
             div.className = 'fruit';
+
+            // If unobtainable, add unobtainable class
+            if (fruit.status === 'unobtainable') {
+                div.classList.add('unobtainable');
+            }
+
             div.innerHTML = `
-                <img src="${fruit.image}" alt="${fruit.name}">
-                <p>${fruit.name}</p>
-                <span class="rarity ${fruit.rarity}">
-                  ${fruit.rarity.charAt(0).toUpperCase() + fruit.rarity.slice(1)}
-                </span>
+            <img src="${fruit.image}" alt="${fruit.name}">
+            <p>${fruit.name}</p>
+            <span class="rarity ${fruit.rarity}">
+                ${fruit.rarity.charAt(0).toUpperCase() + fruit.rarity.slice(1)}
+            </span>
             `;
+
             div.onclick = () => {
                 selectedFruit = fruit;
                 document.getElementById('selectedFruitName').textContent = fruit.name;
+                document.getElementById('weightInput').value = selectedFruit.baseWeightKg;
                 attachCalculateListeners();
                 calculate();
 
@@ -114,28 +122,39 @@ function calculate() {
     let goldOrRainbow = 1;
     let mutationsCount = 0;
     let mutationsSum = 0;
-    let mutationsMultiplier = 1;
 
     document.querySelectorAll('#mutationsGrid input:checked').forEach(cb => {
         if (cb.value == 20 || cb.value == 50) {
             goldOrRainbow = parseFloat(cb.value);
         } else {
-        mutationsCount += 1;
-        mutationsSum += parseFloat(cb.value);
+            mutationsCount += 1;
+            mutationsSum += parseFloat(cb.value);
         }
     });
 
-    mutationsMultiplier = goldOrRainbow * (1 + mutationsSum - mutationsCount);
+    const mutationsMultiplier = goldOrRainbow * (1 + mutationsSum - mutationsCount);
 
     const friendBonus = parseInt(document.getElementById('friendBonus').value) || 0;
-    let friendBonusMultiplier = 1 + (friendBonus * 0.10);
+    const friendBonusMultiplier = 1 + (friendBonus * 0.10);
 
     let weightValue = weightKg / selectedFruit.baseWeightKg;
     weightValue *= weightValue;
 
     const fruitValue = selectedFruit.baseValue * weightValue * mutationsMultiplier * friendBonusMultiplier;
 
-    document.getElementById('result').textContent = `Estimated Value: $${fruitValue.toFixed(2)}`;
+    document.getElementById('result').textContent = `Estimated Value: $${formatNumber(fruitValue)}`;
+}
+
+function formatNumber(value) {
+    if (value >= 1_000_000_000) {
+        return (value / 1_000_000_000).toFixed(2) + 'B';
+    } else if (value >= 1_000_000) {
+        return (value / 1_000_000).toFixed(2) + 'M';
+    } else if (value >= 1_000) {
+        return (value / 1_000).toFixed(2) + 'K';
+    } else {
+        return value.toFixed(2);
+    }
 }
 
 // Dark mode toggle
