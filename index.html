@@ -29,9 +29,12 @@
 
     <div id="calculator">
         <h2 id="selectedFruitName" style="margin-bottom: 10px; text-align: center;"></h2>
-        <label>Weight (grams):
-            <input type="number" id="weightInput" placeholder="Enter weight in grams">
+        <label>Weight (kg):
+            <input type="number" id="weightInput" placeholder="1.00">
         </label>
+        <label for="friendBonus">Friend Bonus:</label>
+        <span id="friendBonusValue">0%</span>
+        <input type="range" id="friendBonus" min="0" max="5" value="0">
         <br><br>
         <label>Mutations:</label>
         <div id="mutationsGrid"></div>

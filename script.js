@@ -87,6 +87,13 @@ function attachCalculateListeners() {
     const weightInput = document.getElementById('weightInput');
     weightInput.addEventListener('input', calculate);
 
+    const friendBonusInput = document.getElementById('friendBonus');
+    friendBonusInput.addEventListener('input', () => {
+        const percent = friendBonusInput.value * 10; // 1 → 10%
+        document.getElementById('friendBonusValue').textContent = `${percent}%`;
+        calculate();
+    });
+
     document.querySelectorAll('#mutationsGrid input').forEach(cb => {
         cb.addEventListener('change', calculate);
     });
@@ -98,21 +105,36 @@ function calculate() {
         return;
     }
 
-    const weightGrams = parseFloat(document.getElementById('weightInput').value);
-    if (isNaN(weightGrams) || weightGrams <= 0) {
+    const weightKg = parseFloat(document.getElementById('weightInput').value);
+    if (isNaN(weightKg) || weightKg <= 0) {
         document.getElementById('result').textContent = 'Estimated Value: $0.00';
         return;
     }
 
-    const weightKg = weightGrams / 1000;
-    let totalMultiplier = 1;
+    let goldOrRainbow = 1;
+    let mutationsCount = 0;
+    let mutationsSum = 0;
+    let mutationsMultiplier = 1;
+
     document.querySelectorAll('#mutationsGrid input:checked').forEach(cb => {
-        totalMultiplier *= parseFloat(cb.value);
+        if (cb.value == 20 || cb.value == 50) {
+            goldOrRainbow = parseFloat(cb.value);
+        } else {
+        mutationsCount += 1;
+        mutationsSum += parseFloat(cb.value);
+        }
     });
+
+    mutationsMultiplier = goldOrRainbow * (1 + mutationsSum - mutationsCount);
+
+    const friendBonus = parseInt(document.getElementById('friendBonus').value) || 0;
+    let friendBonusMultiplier = 1 + (friendBonus * 0.10);
 
     let weightValue = weightKg / selectedFruit.baseWeightKg;
     weightValue *= weightValue;
-    const fruitValue = selectedFruit.baseValue * weightValue * totalMultiplier;
+
+    const fruitValue = selectedFruit.baseValue * weightValue * mutationsMultiplier * friendBonusMultiplier;
+
     document.getElementById('result').textContent = `Estimated Value: $${fruitValue.toFixed(2)}`;
 }
 

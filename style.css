@@ -73,6 +73,7 @@ h1 {
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   gap: 15px;
   margin-bottom: 30px;
+  padding: 5px 0;
 
   /* New: limit height and enable scrolling */
   max-height: 400px;
@@ -122,9 +123,7 @@ h1 {
 
 .fruit.selected {
   border: 2px solid #4CAF50;
-  /* Green outline */
   background: rgba(76, 175, 80, 0.1);
-  /* Light green tint */
 }
 
 .rarity {
@@ -136,7 +135,6 @@ h1 {
   text-transform: capitalize;
 
   position: absolute;
-  /* NEW: stick it to the bottom */
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
@@ -220,8 +218,6 @@ input[type=\"number\"] {
 }
 
 #mutationsGrid label {
-  /* display: block;
-  margin-bottom: 8px; */
   cursor: pointer;
   font-size: 0.95em;
 }
@@ -271,6 +267,15 @@ body.dark {
   --button-border: #eee;
   --button-bg-hover: #eee;
   --button-text-hover: #121212;
+}
+
+body.dark #filters label {
+  background: #333;
+  color: #eee;
+}
+
+body.dark #filters input[type="checkbox"] {
+  accent-color: #eee; /* makes checkbox tick visible in dark mode, supported in modern browsers */
 }
 
 /* Mobile tweaks */
