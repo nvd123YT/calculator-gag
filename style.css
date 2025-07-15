@@ -40,95 +40,88 @@ h1 {
   color: var(--button-text-hover);
 }
 
-#searchInput {
+#toggleView {
+  display: block;
+  width: auto;
+  margin: 10px auto 20px auto;
+  padding: 10px 20px;
+  border: 2px solid var(--button-border);
+  background: none;
+  color: var(--text);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, border 0.3s;
+}
+
+#toggleView:hover {
+  background: var(--button-bg-hover);
+  color: var(--button-text-hover);
+}
+
+#sliderContainer {
   width: 100%;
-  max-width: 400px;
-  padding: 10px;
-  font-size: 1em;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  margin: auto;
+  padding: 5px;
+  overflow: hidden;
+  position: relative;
 }
 
-#filters {
-  margin: 20px 0;
+#contentWrapper {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  width: 200%;
+  transition: transform 0.4s ease;
 }
 
-#filters label {
-  background: #f0f0f0;
-  padding: 6px 10px;
-  border-radius: 4px;
+#contentWrapper.slideToTimers {
+  transform: translateX(-50%);
+}
+
+#fruitSection,
+#timersSection {
+  flex: 0 0 50%;
+  width: 50%;
+  transition: opacity 0.4s ease;
+}
+
+#themeToggle {
+  display: block;
+  color: var(--text);
+  margin: 15px auto 20px auto;
+  background: none;
+  border: 2px solid var(--button-border);
+  padding: 8px 16px;
+  border-radius: 20px;
   cursor: pointer;
   font-size: 0.9em;
+  transition: background 0.3s, color 0.3s, border 0.3s;
 }
 
-#filters input[type="checkbox"] {
-  margin-right: 4px;
+#themeToggle:hover {
+  background: var(--button-bg-hover);
+  color: var(--button-text-hover);
 }
 
-#fruitGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  gap: 15px;
-  margin-bottom: 30px;
-  padding: 5px 0;
-
-  /* New: limit height and enable scrolling */
-  max-height: 400px;
-  /* adjust for ~4 rows */
-  overflow-y: auto;
-  padding-right: 10px;
-  /* for scrollbar space if needed */
-  scroll-behavior: smooth;
-}
-
-.fruit {
-  display: flex;
-  flex-direction: column;
-  background: var(--card-bg);
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
+#toggleView {
+  display: block;
+  width: auto;
+  margin: 10px auto 20px auto;
+  padding: 10px 20px;
+  border: 2px solid var(--button-border);
+  background: none;
+  color: var(--text);
+  border-radius: 8px;
   cursor: pointer;
-  padding: 6px;
-  transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
-  position: relative;
-  /* NEW: make it a positioned parent */
-  height: 200px;
-  /* NEW: force all cards same height */
-  padding-bottom: 40px;
-  /* NEW: make room for rarity at bottom */
+  transition: background 0.3s, color 0.3s, border 0.3s;
 }
 
-.fruit:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+#toggleView:hover {
+  background: var(--button-bg-hover);
+  color: var(--button-text-hover);
 }
 
-.fruit img {
-  max-width: 100%;
-  object-fit: contain;
-  margin-bottom: 8px;
-  height: 82px;
-}
-
-.fruit p {
-  line-height: 20px;
-  margin: auto;
-  font-family: monospace;
-  font-size: 1.3em;
-}
-
-/* Unobtainable fruit slight red tint */
-.fruit.unobtainable {
-  background: rgba(255, 0, 0, 0.05); /* very subtle red tint */
-}
-
-.fruit.selected {
-  border: 2px solid #4CAF50;
-  background: rgba(76, 175, 80, 0.1);
+.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .rarity {
@@ -185,48 +178,6 @@ h1 {
   color: #fff;
 }
 
-.badge-unobtainable {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background: #f44336;
-  color: #fff;
-  font-size: 0.7em;
-  padding: 2px 6px;
-  border-radius: 4px;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-#calculator {
-  background: var(--card-bg);
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-input[type=\"number\"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid var(--input-border);
-  border-radius: 8px;
-  margin-bottom: 15px;
-  font-size: 1em;
-  background: var(--input-bg);
-  color: var(--text);
-}
-
-#mutationsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
-  gap: 3px;
-}
-
-#mutationsGrid label {
-  cursor: pointer;
-  font-size: 0.95em;
-}
-
 button {
   display: block;
   width: 100%;
@@ -242,13 +193,6 @@ button {
 
 button:hover {
   background: #45a049;
-}
-
-#result {
-  margin-top: 15px;
-  font-size: 1.1em;
-  text-align: center;
-  font-weight: 600;
 }
 
 /* Color Variables */

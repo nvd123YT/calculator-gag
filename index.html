@@ -5,45 +5,61 @@
     <meta charset="UTF-8" />
     <title>Grow a Garden Value Calculator</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/fruits.css" />
+    <link rel="stylesheet" href="css/timers.css" />
 </head>
 
 <body>
     <h1>Grow a Garden Value Calculator</h1>
 
-    <input type="text" id="searchInput" placeholder="Search fruits..." />
-    <div id="filters">
-        <label><input type="checkbox" class="rarity-filter" value="common"> Common</label>
-        <label><input type="checkbox" class="rarity-filter" value="uncommon"> Uncommon</label>
-        <label><input type="checkbox" class="rarity-filter" value="rare"> Rare</label>
-        <label><input type="checkbox" class="rarity-filter" value="legendary"> Legendary</label>
-        <label><input type="checkbox" class="rarity-filter" value="mythical"> Mythical</label>
-        <label><input type="checkbox" class="rarity-filter" value="divine"> Divine</label>
-        <label><input type="checkbox" class="rarity-filter" value="prismatic"> Prismatic</label>
-        <label>
-            <input type="checkbox" id="showUnobtainable">
-            Show Past Events
-        </label>
-    </div>
+    <button id="toggleView">Timers</button>
+    <div id="sliderContainer">
+        <div id="contentWrapper">
+            <section id="fruitSection">
+                <input type="text" id="searchInput" placeholder="Search fruits..." />
+                <div id="filters">
+                    <label><input type="checkbox" class="rarity-filter" value="common"> Common</label>
+                    <label><input type="checkbox" class="rarity-filter" value="uncommon"> Uncommon</label>
+                    <label><input type="checkbox" class="rarity-filter" value="rare"> Rare</label>
+                    <label><input type="checkbox" class="rarity-filter" value="legendary"> Legendary</label>
+                    <label><input type="checkbox" class="rarity-filter" value="mythical"> Mythical</label>
+                    <label><input type="checkbox" class="rarity-filter" value="divine"> Divine</label>
+                    <label><input type="checkbox" class="rarity-filter" value="prismatic"> Prismatic</label>
+                    <label>
+                        <input type="checkbox" id="showUnobtainable">
+                        Show Past Events
+                    </label>
+                </div>
 
-    <div id="fruitGrid" class="fruit-grid"></div>
+                <div id="fruitGrid"></div>
 
-    <div id="calculator">
-        <h2 id="selectedFruitName" style="margin-bottom: 10px; text-align: center;"></h2>
-        <label>Weight (kg):
-            <input type="number" id="weightInput" placeholder="1.00">
-        </label>
-        <label for="friendBonus">Friend Bonus:</label>
-        <span id="friendBonusValue">0%</span>
-        <input type="range" id="friendBonus" min="0" max="5" value="0">
-        <br><br>
-        <label>Mutations:</label>
-        <div id="mutationsGrid"></div>
-        <p id="result">Estimated Value: $0.00</p>
+                <div id="calculator">
+                    <h2 id="selectedFruitName" style="margin-bottom: 10px; text-align: center;"></h2>
+                    <label>Weight (kg):
+                        <input type="number" id="weightInput" placeholder="1.00">
+                    </label>
+                    <label for="friendBonus">Friend Bonus:</label>
+                    <span id="friendBonusValue">0%</span>
+                    <input type="range" id="friendBonus" min="0" max="5" value="0">
+                    <br><br>
+                    <label>Mutations:</label>
+                    <div id="mutationsGrid"></div>
+                    <p id="result">Estimated Value: $0.00</p>
+                </div>
+            </section>
+
+            <section id="timersSection" class="hidden">
+                <div id="activeTimers"></div>
+                <div id="timerGrid"></div>
+            </section>
+        </div>
     </div>
 
     <button id="themeToggle">🌙 Toggle Dark Mode</button>
 
     <script src="script.js"></script>
+    <script src="scripts/fruits.js"></script>
+    <script src="scripts/timers.js"></script>
 </body>
 
 </html>

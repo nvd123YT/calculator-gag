@@ -1,0 +1,36 @@
+{
+  "eggs": [
+    {
+      "name": "Common Egg",
+      "rarity": "common",
+      "image": "images/common_egg.png",
+      "timeSeconds": 86400
+    },
+    {
+      "name": "Uncommon Egg",
+      "rarity": "uncommon",
+      "image": "images/uncommon_egg.png",
+      "timeSeconds": 172800
+    },
+    {
+      "name": "Rare Egg",
+      "rarity": "rare",
+      "image": "images/rare_egg.png",
+      "timeSeconds": 259200
+    },
+    {
+      "name": "Legendary Egg",
+      "rarity": "legendary",
+      "image": "images/legendary_egg.png",
+      "timeSeconds": 345600
+    },
+    {
+      "name": "Mythical Egg",
+      "rarity": "mythical",
+      "image": "images/mythical_egg.png",
+      "timeSeconds": 432000
+    }
+  ],
+  "crafting": [
+  ]
+}
