@@ -1060,6 +1060,11 @@
       "multiplier": 120.0
     },
     {
+      "id": "dawnbound",
+      "name": "🌻Dawnbound",
+      "multiplier": 150.0,
+    },
+    {
       "id": "galactic",
       "name": "🌌Galactic",
       "multiplier": 120.0,
@@ -1082,11 +1087,6 @@
       "name": "🟣Voidtouched",
       "multiplier": 135.0,
       "admin": true
-    },
-    {
-      "id": "dawnbound",
-      "name": "🌻Dawnbound",
-      "multiplier": 150.0,
     }
   ]
 }
