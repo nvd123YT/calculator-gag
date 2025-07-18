@@ -997,7 +997,7 @@
     {
       "id": "oldamber",
       "name": "🟠Old Amber",
-      "multiplier": 20.0
+      "multiplier": 19.9
     },
     {
       "id": "zombified",
@@ -1017,7 +1017,7 @@
     {
       "id": "ancientamber",
       "name": "🟠Ancient Amber",
-      "multiplier": 50.0
+      "multiplier": 49.9
     },
     {
       "id": "friendbound",
@@ -1082,6 +1082,11 @@
       "name": "🟣Voidtouched",
       "multiplier": 135.0,
       "admin": true
+    },
+    {
+      "id": "dawnbound",
+      "name": "🌻Dawnbound",
+      "multiplier": 150.0,
     }
   ]
 }
