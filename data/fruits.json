@@ -990,13 +990,28 @@
       "multiplier": 10.0
     },
     {
+      "id": "toxic",
+      "name": "☢️Toxic",
+      "multiplier": 12.0
+    },
+    {
       "id": "tempestuous",
       "name": "💨Tempestuous",
       "multiplier": 14.0
     },
     {
+      "id": "chakra",
+      "name": "🦊Chakra",
+      "multiplier": 15.0
+    },
+    {
       "id": "oldamber",
       "name": "🟠Old Amber",
+      "multiplier": 19.9
+    },
+    {
+      "id": "tranquil",
+      "name": "☯️Tranquil",
       "multiplier": 19.9
     },
     {
@@ -1037,6 +1052,11 @@
     {
       "id": "aurora",
       "name": "🌌Aurora",
+      "multiplier": 90.0
+    },
+    {
+      "id": "foxfirechakra",
+      "name": "🦊 Foxfire Chakra",
       "multiplier": 90.0
     },
     {
