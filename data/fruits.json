@@ -971,11 +971,6 @@
       "multiplier": 2.0
     },
     {
-      "id": "clay",
-      "name": "🟤Clay",
-      "multiplier": 3.0
-    },
-    {
       "id": "chilled",
       "name": "❄️Chilled",
       "multiplier": 2.0
@@ -996,19 +991,24 @@
       "multiplier": 3.0
     },
     {
-      "id": "bloodlit",
-      "name": "🩸Bloodlit",
-      "multiplier": 4.0
-    },
-    {
       "id": "burnt",
       "name": "🔥Burnt",
       "multiplier": 4.0
     },
     {
+      "id": "bloodlit",
+      "name": "🩸Bloodlit",
+      "multiplier": 5.0
+    },
+    {
       "id": "verdant",
       "name": "🟢Verdant",
-      "multiplier": 4.0
+      "multiplier": 5.0
+    },
+    {
+      "id": "clay",
+      "name": "🟤Clay",
+      "multiplier": 5.0
     },
     {
       "id": "twisted",
@@ -1067,14 +1067,19 @@
       "multiplier": 12.0
     },
     {
-      "id": "tempestuous",
-      "name": "💨Tempestuous",
-      "multiplier": 14.0
-    },
-    {
       "id": "chakra",
       "name": "🦊Chakra",
       "multiplier": 15.0
+    },
+    {
+      "id": "eclipsed",
+      "name": "🌜Eclipsed",
+      "multiplier": 15.0
+    },
+    {
+      "id": "tempestuous",
+      "name": "💨Tempestuous",
+      "multiplier": 19.0
     },
     {
       "id": "oldamber",
@@ -1100,6 +1105,11 @@
       "id": "ceramic",
       "name": "⬜Ceramic",
       "multiplier": 30.0
+    },
+    {
+      "id": "enlightened",
+      "name": "💡Enlightened",
+      "multiplier": 35.0
     },
     {
       "id": "ancientamber",
