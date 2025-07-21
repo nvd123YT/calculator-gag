@@ -1045,6 +1045,11 @@
       "multiplier": 75.0
     },
     {
+      "id": "radioactive",
+      "name": "☢️Radioactive",
+      "multiplier": 80.0
+    },
+    {
       "id": "sundried",
       "name": "☀️Sundried",
       "multiplier": 85.0
