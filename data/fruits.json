@@ -52,11 +52,19 @@
       "baseWeightKg": 0.05
     },
     {
+      "name": "Monoblooma",
+      "image": "images/monoblooma.webp",
+      "rarity": "uncommon",
+      "baseValue": 22000,
+      "baseWeightKg": 0.477
+    },
+    {
       "name": "Stonebite",
       "image": "images/stonebite.webp",
       "rarity": "uncommon",
       "baseValue": 35000,
-      "baseWeightKg": 1.00
+      "baseWeightKg": 1.00,
+      "status": "unobtainable"
     },
     {
       "name": "Red Lollipop",
@@ -164,11 +172,19 @@
       "baseWeightKg": 2.00
     },
     {
+      "name": "Zenflare",
+      "image": "images/zenflare.webp",
+      "rarity": "rare",
+      "baseValue": 22563,
+      "baseWeightKg": 1.34
+    },
+    {
       "name": "Paradise Petal",
       "image": "images/paradisepetal.webp",
       "rarity": "rare",
       "baseValue": 25000,
-      "baseWeightKg": 2.75
+      "baseWeightKg": 2.75,
+      "status": "unobtainable"
     },
     {
       "name": "Horsetail",
@@ -176,6 +192,13 @@
       "rarity": "rare",
       "baseValue": 30000,
       "baseWeightKg": 3.00
+    },
+    {
+      "name": "Serenity",
+      "image": "images/serenity.webp",
+      "rarity": "rare",
+      "baseValue": 31588,
+      "baseWeightKg": 0.25
     },
     {
       "name": "Candy Sunflower",
@@ -312,7 +335,8 @@
       "image": "images/aloevera.webp",
       "rarity": "legendary",
       "baseValue": 69000,
-      "baseWeightKg": 5.50
+      "baseWeightKg": 5.50,
+      "status": "unobtainable"
     },
     {
       "name": "Bamboo",
@@ -340,14 +364,30 @@
       "image": "images/horneddinoshroom.webp",
       "rarity": "legendary",
       "baseValue": 69000,
-      "baseWeightKg": 5.00
+      "baseWeightKg": 5.00,
+      "status": "unobtainable"
     },
     {
       "name": "Boneboo",
       "image": "images/boneboo.webp",
       "rarity": "legendary",
       "baseValue": 141141,
-      "baseWeightKg": 15.00
+      "baseWeightKg": 15.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Taro Flower",
+      "image": "images/taroflower.webp",
+      "rarity": "legendary",
+      "baseValue": 108300,
+      "baseWeightKg": 6.64
+    },
+    {
+      "name": "Soft Sunshine",
+      "image": "images/softsunshine.webp",
+      "rarity": "legendary",
+      "baseValue": 40613,
+      "baseWeightKg": 1.90
     },
     {
       "name": "Cranberry",
@@ -448,7 +488,8 @@
       "image": "images/guanabana.webp",
       "rarity": "mythical",
       "baseValue": 70500,
-      "baseWeightKg": 4.00
+      "baseWeightKg": 4.00,
+      "status": "unobtainable"
     },
     {
       "name": "Amber Spine",
@@ -525,7 +566,29 @@
       "image": "images/fireflyfern.webp",
       "rarity": "mythical",
       "baseValue": 60000,
-      "baseWeightKg": 4.00
+      "baseWeightKg": 4.00,
+      "status": "unobtainable"
+    },
+    {
+      "name": "Spiked Mango",
+      "image": "images/spikedmango.webp",
+      "rarity": "mythical",
+      "baseValue": 67500,
+      "baseWeightKg": 15.00
+    },
+    {
+      "name": "Zen Rocks",
+      "image": "images/zenrocks.webp",
+      "rarity": "mythical",
+      "baseValue": 135375,
+      "baseWeightKg": 17.10
+    },
+    {
+      "name": "Hinomai",
+      "image": "images/hinomai.webp",
+      "rarity": "mythical",
+      "baseValue": 80000,
+      "baseWeightKg": 7.07
     },
     {
       "name": "Easter Egg",
@@ -682,6 +745,13 @@
       "baseWeightKg": 10.00
     },
     {
+      "name": "Maple Apple",
+      "image": "images/mapleapple.webp",
+      "rarity": "divine",
+      "baseValue": 77777,
+      "baseWeightKg": 3.50
+    },
+    {
       "name": "Pitcher Plant",
       "image": "images/pitcherplant.webp",
       "rarity": "divine",
@@ -707,7 +777,8 @@
       "image": "images/fossilight.webp",
       "rarity": "divine",
       "baseValue": 80000,
-      "baseWeightKg": 4.00
+      "baseWeightKg": 4.00,
+      "status": "unobtainable"
     },
     {
       "name": "Cherry Blossom",
@@ -869,7 +940,8 @@
       "image": "images/boneblossom.webp",
       "rarity": "transcendent",
       "baseValue": 200000,
-      "baseWeightKg": 3.00
+      "baseWeightKg": 3.00,
+      "status": "unobtainable"
     }
   ],
   "mutations": [
